@@ -207,10 +207,12 @@ oppure in inglese:
     keywords: [
       "come contare", 
       "contare celle", 
-      "conta.se", 
+      "conta se", 
       "conta celle con criterio",
       "countif",
-      "contare valori specifici"
+      "contare valori specifici",
+      "conta.se",
+      "count if"
     ],
     answer: `
 Per contare il numero di celle che soddisfano un criterio specifico, puoi usare:
@@ -261,13 +263,18 @@ oppure in inglese:
     id: 6,
     keywords: [
       "cercare un valore", 
-      "cerca.vert", 
+      "cerca vert", 
       "vlookup", 
-      "cerca.vert",
-      "cerca.x",
+      "cerca vert",
+      "cerca x",
       "xlookup",
       "cerca nella tabella",
-      "trova valore corrispondente"
+      "trova valore corrispondente",
+      "trova punteggio",
+      "trova valore",
+      "cerca.vert",
+      "vlookup in excel",
+      "lookup value"
     ],
     answer: `
 Per cercare un valore in una tabella e restituire un risultato corrispondente, puoi usare:
@@ -323,7 +330,9 @@ oppure in inglese:
       "calcolare differenza percentuale", 
       "percentuale di crescita", 
       "differenza percentuale tra due colonne",
-      "percentuale tra y e z"
+      "percentuale tra y e z",
+      "calcolare differenza percentuale",
+      "crescita percentuale"
     ],
     answer: `
 Per calcolare la differenza percentuale tra due colonne Y e Z, puoi usare:
@@ -349,19 +358,25 @@ Per calcolare la differenza percentuale tra due colonne Y e Z, puoi usare:
       "filtro avanzato", 
       "filtrare celle",
       "filter data",
-      "filtrare valori in excel"
+      "filtrare valori in excel",
+      "filtrare con criteri specifici",
+      "filtri avanzati",
+      "advanced filter",
+      "criteri di filtro"
     ],
     answer: `
-Per filtrare i dati in Excel basandoti su determinati criteri, puoi usare i **Filtri** o la **Formattazione Condizionale**.
+Per filtrare i dati in Excel basandoti su determinati criteri, puoi usare i **Filtri** o i **Filtri Avanzati**.
 
-**Usare Filtri:**
+**Usare Filtri Semplici:**
 1. Seleziona l'intervallo di dati.
 2. Vai a **Dati** > **Filtro**.
 3. Clicca sull'icona del filtro nella colonna desiderata e imposta i criteri.
 
-**Usare Filtraggio Avanzato:**
-1. Vai a **Dati** > **Avanzate**.
+**Usare Filtri Avanzati:**
+1. Vai a **Dati** > **Avanzati**.
 2. Configura i criteri di filtro e l'intervallo di destinazione.
+3. Specifica l'intervallo di dati da filtrare e l'intervallo dei criteri.
+4. Clicca su **OK** per applicare il filtro avanzato.
 
 **Istruzioni:**
 - Utilizza i filtri per visualizzare solo le righe che soddisfano i tuoi criteri specifici, facilitando l'analisi dei dati.
@@ -374,7 +389,11 @@ Per filtrare i dati in Excel basandoti su determinati criteri, puoi usare i **Fi
       "ordinare colonne", 
       "sort data", 
       "ordinare valori in excel",
-      "sort columns"
+      "sort columns",
+      "ordinare in ordine crescente",
+      "sort ascending",
+      "ordinare in ordine decrescente",
+      "sort descending"
     ],
     answer: `
 Per ordinare i dati in Excel, puoi usare la funzione di **Ordinamento**.
@@ -425,10 +444,12 @@ Per calcolare il tasso di crescita percentuale tra due valori, puoi usare:
       "rimuovere spazi", 
       "eliminare spazi", 
       "trim", 
-      "ANNULLA.SPAZI", 
+      "annulla spazi", 
       "remove extra spaces",
       "remove spaces in excel",
-      "clean text"
+      "clean text",
+      "rimuovere spazi inutili",
+      "eliminare spazi extra"
     ],
     answer: `
 Per rimuovere gli spazi extra dal testo in una cella, puoi usare:
@@ -458,7 +479,8 @@ oppure in inglese:
       "somme se", 
       "sum with condition",
       "sommare con criterio",
-      "sumif in excel"
+      "sumif in excel",
+      "sommare valori condizionati"
     ],
     answer: `
 Per sommare i valori che soddisfano un criterio specifico, puoi usare:
@@ -488,7 +510,8 @@ oppure in inglese:
       "somme avec plusieurs critères", 
       "sum with multiple conditions",
       "sommare con criteri multipli",
-      "sumifs in excel"
+      "sumifs in excel",
+      "sommare valori multipli"
     ],
     answer: `
 Per sommare i valori che soddisfano più criteri, puoi usare:
@@ -546,7 +569,8 @@ Per calcolare il tasso di crescita percentuale tra due valori, puoi usare:
       "somme avec plusieurs critères", 
       "sum with multiple conditions",
       "sommare con criteri multipli",
-      "sumifs in excel"
+      "sumifs in excel",
+      "sommare valori multipli"
     ],
     answer: `
 Per sommare i valori che soddisfano più criteri, puoi usare:
@@ -570,13 +594,22 @@ oppure in inglese:
   {
     id: 17,
     keywords: [
-      "cerca.x", 
+      "cerca x", 
       "xlookup", 
       "funzione cercax", 
       "xlookup in excel",
       "cerca x lookup",
       "xlookup formula",
-      "funzione xlookup"
+      "funzione xlookup",
+      "indirizzo",
+      "colonna l",
+      "colonna m",
+      "restituire",
+      "cercare il valore",
+      "cercax",
+      "cerca.vert",
+      "vlookup in excel",
+      "lookup value"
     ],
     answer: `
 Per utilizzare la funzione CERCA.X (XLOOKUP) per cercare un valore e restituire un risultato corrispondente, puoi usare:
@@ -606,13 +639,14 @@ oppure in inglese:
       "filtraggio avanzato",
       "filter data multiple conditions",
       "filtrare dati con criteri multipli",
-      "excel advanced filter"
+      "excel advanced filter",
+      "filtri multipli"
     ],
     answer: `
 Per filtrare i dati in Excel basandoti su più criteri, puoi usare i **Filtri Avanzati**.
 
 **Filtraggio Avanzato:**
-1. Vai a **Dati** > **Avanzate**.
+1. Vai a **Dati** > **Avanzati**.
 2. Configura i criteri di filtro e l'intervallo di destinazione.
 3. Specifica l'intervallo di dati da filtrare e l'intervallo dei criteri.
 4. Clicca su **OK** per applicare il filtro avanzato.
@@ -631,7 +665,7 @@ Per filtrare i dati in Excel basandoti su più criteri, puoi usare i **Filtri Av
  *******************************************************/
 const fuseOptions = {
   includeScore: true,
-  threshold: 0.4, // Imposta la soglia di tolleranza per le corrispondenze
+  threshold: 0.3, // Abbassata la soglia per maggiore flessibilità
   keys: ['keywords']
 };
 
