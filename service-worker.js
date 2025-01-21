@@ -8,7 +8,6 @@ const urlsToCache = [
   '/styles.css',
   '/app.js',
   '/manifest.json',
-  // Eventualmente aggiungi le icone o altre risorse
   '/icons/icon-192.png',
   '/icons/icon-512.png'
 ];
@@ -26,7 +25,7 @@ self.addEventListener('install', event => {
 
 // Attivazione del Service Worker
 self.addEventListener('activate', event => {
-  // Se la versione del cache cambia, potremmo voler cancellare i vecchi caches.
+  // Se la versione del cache cambia, cancelliamo i vecchi caches
   event.waitUntil(
     caches.keys().then(cacheNames => {
       return Promise.all(
