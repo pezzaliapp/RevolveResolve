@@ -450,6 +450,6 @@ Passi Successivi
 	4.	Esplora Librerie Avanzate di NLP
 	•	Per una comprensione ancora più profonda delle domande degli utenti, potresti integrare librerie di Natural Language Processing (NLP) più avanzate o servizi esterni.
 
-Se hai bisogno di ulteriori assistenza o di funzionalità aggiuntive, non esitare a chiedere!
+Se hai bisogno di ulteriori assistenza o di funzionalità aggiuntive, non esitare a chiedere! scrivimi pezzalialessandro@gmail.com
 
 Buon sviluppo!
