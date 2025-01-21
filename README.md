@@ -23,17 +23,17 @@ Caratteristiche
 
 Installazione
 
-	1.	Clona il Repository
+1.	Clona il Repository
 
 git clone https://github.com/tuo-username/RevolveResolve.git
 
 
-	2.	Naviga nella Directory del Progetto
+2.	Naviga nella Directory del Progetto
 
 cd RevolveResolve
 
 
-	3.	Servi l’App Localmente
+3.	Servi l’App Localmente
 Poiché le PWA richiedono un server web, puoi utilizzare un server semplice come Live Server per VS Code o usare il server integrato di Python.
 
 	•	Usando Python 3
@@ -47,32 +47,32 @@ npm install -g serve
 serve
 
 
-	4.	Accedi all’App
+4.	Accedi all’App
 Apri il tuo browser e vai a http://localhost:8000.
 
-	5.	Installa la PWA
+5.	Installa la PWA
 Nel tuo browser, clicca sul pulsante di installazione (solitamente presente nella barra degli indirizzi) per aggiungere RevolveResolve al tuo dispositivo per l’accesso offline.
 
 Utilizzo
 
 Gestione Dati Locali
 
-	1.	Inserisci Dati
+1.	Inserisci Dati
 	•	Naviga nella sezione “Gestione Dati Locali”.
 	•	Inserisci del testo nel campo di input e clicca su “Salva nei dati locali” per memorizzare i dati.
-	2.	Visualizza Dati Memorizzati
+2.	Visualizza Dati Memorizzati
 	•	I dati memorizzati vengono visualizzati nella sezione “Dati memorizzati”.
-	3.	Esporta Dati
+3.	Esporta Dati
 	•	Clicca su “Esporta Dati (JSON)” per scaricare i tuoi dati come file JSON.
-	4.	Importa Dati
+4.	Importa Dati
 	•	Seleziona un file JSON utilizzando l’input file e clicca su “Importa Dati (JSON)” per caricare i dati nell’app.
 
 Q&A Formule Excel
 
-	1.	Poni una Domanda
+1.	Poni una Domanda
 	•	Naviga nella sezione “Trova la Formula Excel”.
 	•	Inserisci la tua domanda relativa a Excel in linguaggio naturale (es. “Ho due colonne A e B, devo trovare quali dati mancano tra le due colonne.”).
-	2.	Ricevi la Formula
+2.	Ricevi la Formula
 	•	Clicca su “Trova Formula” per ricevere la formula Excel corrispondente insieme a istruzioni dettagliate.
 
 Esempi di Q&A Excel
