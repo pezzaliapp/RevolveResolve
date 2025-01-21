@@ -15,17 +15,33 @@
             background: white;
             padding: 20px;
             border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
         select, input[type="text"], button {
             width: 100%;
             padding: 10px;
             margin: 10px 0;
+            font-size: 16px;
+        }
+        button {
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+        button:hover {
+            background-color: #0056b3;
         }
         #excelAnswer {
             background-color: #e2e2e2;
             padding: 20px;
             border-radius: 8px;
             white-space: pre-wrap;
+            margin-top: 20px;
+        }
+        h1, h2 {
+            text-align: center;
         }
     </style>
 </head>
@@ -34,16 +50,24 @@
         <h1>RevolveResolve - Formule Excel</h1>
         
         <!-- Menu a Tendina delle Domande Predefinite -->
-        <label for="predefinedQuestions">Seleziona una domanda predefinita:</label>
+        <label for="predefinedQuestions"><strong>Seleziona una domanda predefinita:</strong></label>
         <select id="predefinedQuestions">
             <option value="">-- Seleziona una domanda --</option>
             <option value="Come posso utilizzare la funzione CERCA.X (XLOOKUP) per cercare il valore 'Luca' nella colonna L e restituire il suo indirizzo dalla colonna M?">Come posso utilizzare la funzione CERCA.X (XLOOKUP) per cercare il valore 'Luca' nella colonna L e restituire il suo indirizzo dalla colonna M?</option>
             <option value="Come posso sommare i valori nelle celle da A1 ad A10?">Come posso sommare i valori nelle celle da A1 ad A10?</option>
+            <option value="Come posso calcolare la media dei valori nelle celle da B1 a B10?">Come posso calcolare la media dei valori nelle celle da B1 a B10?</option>
+            <option value="Come posso contare il numero di celle che contengono 'Sì' nella colonna C?">Come posso contare il numero di celle che contengono 'Sì' nella colonna C?</option>
+            <option value="Come posso trovare il valore massimo nell'intervallo D1:D20?">Come posso trovare il valore massimo nell'intervallo D1:D20?</option>
+            <option value="Come posso utilizzare la funzione CERCA.VERT (VLOOKUP) per cercare 'Mario' nella colonna F e restituire il valore dalla colonna G?">Come posso utilizzare la funzione CERCA.VERT (VLOOKUP) per cercare 'Mario' nella colonna F e restituire il valore dalla colonna G?</option>
+            <option value="Come posso calcolare la differenza percentuale tra i valori nelle colonne Y e Z?">Come posso calcolare la differenza percentuale tra i valori nelle colonne Y e Z?</option>
+            <option value="Come posso sommare i valori nella colonna P che corrispondono a 'Prodotto A' nella colonna Q e sono maggiori di 10 nella colonna R?">Come posso sommare i valori nella colonna P che corrispondono a 'Prodotto A' nella colonna Q e sono maggiori di 10 nella colonna R?</option>
+            <option value="Come posso rimuovere gli spazi extra dal testo nella cella U2?">Come posso rimuovere gli spazi extra dal testo nella cella U2?</option>
+            <option value="Come posso filtrare i dati in Excel basandomi su più criteri?">Come posso filtrare i dati in Excel basandomi su più criteri?</option>
             <!-- Aggiungi ulteriori domande predefinite qui -->
         </select>
         
         <!-- Campo di Input per Domande Personalizzate -->
-        <label for="excelQuestion">Oppure inserisci una tua domanda:</label>
+        <label for="excelQuestion"><strong>Oppure inserisci una tua domanda:</strong></label>
         <input type="text" id="excelQuestion" placeholder="Inserisci la tua domanda qui...">
         
         <!-- Pulsante per Cercare la Formula -->
@@ -60,7 +84,7 @@
     <!-- JavaScript per Gestire la Logica della Ricerca -->
     <script>
         /*******************************************************
-         * Struttura dati in memoria
+         * "Database" di Domande-chiave e Formule Excel
          *******************************************************/
         const excelFormulasDB = [
             {
