@@ -38,6 +38,27 @@
     <!-- Q&A Formule Excel -->
     <section id="excel-qa-section">
       <h2>Trova la Formula Excel</h2>
+      
+      <!-- Menu a Tendina per Domande Predefinite -->
+      <div class="qa-dropdown-container">
+        <label for="predefinedQuestions">Seleziona una domanda predefinita:</label>
+        <select id="predefinedQuestions">
+          <option value="">-- Seleziona una domanda --</option>
+          <option value="Ho due colonne la A e la B, devo trovare quali dati mancano tra le due colonne.">Ho due colonne la A e la B, devo trovare quali dati mancano tra le due colonne.</option>
+          <option value="Come posso sommare i valori nelle celle da A1 ad A10?">Come posso sommare i valori nelle celle da A1 ad A10?</option>
+          <option value="Come posso calcolare la media dei valori nelle celle da B1 a B10?">Come posso calcolare la media dei valori nelle celle da B1 a B10?</option>
+          <option value="Come posso contare quante celle nella colonna C contengono il valore 'Sì'?">Come posso contare quante celle nella colonna C contengono il valore 'Sì'?</option>
+          <option value="Come posso trovare il valore più alto nelle celle da D1 a D20?">Come posso trovare il valore più alto nelle celle da D1 a D20?</option>
+          <option value="Come posso cercare il nome 'Mario' nella colonna F e restituire il suo punteggio dalla colonna G?">Come posso cercare il nome 'Mario' nella colonna F e restituire il suo punteggio dalla colonna G?</option>
+          <option value="Come posso calcolare la differenza percentuale tra le vendite di S1 e S2?">Come posso calcolare la differenza percentuale tra le vendite di S1 e S2?</option>
+          <option value="Come posso sommare i valori che soddisfano un criterio specifico nella colonna Q?">Come posso sommare i valori che soddisfano un criterio specifico nella colonna Q?</option>
+          <option value="Come posso sommare i valori che soddisfano più criteri nelle colonne Q e R?">Come posso sommare i valori che soddisfano più criteri nelle colonne Q e R?</option>
+          <option value="Come posso utilizzare la funzione CERCA.X (XLOOKUP) per cercare il valore 'Luca' nella colonna L e restituire il suo indirizzo dalla colonna M?">Come posso utilizzare la funzione CERCA.X (XLOOKUP) per cercare il valore 'Luca' nella colonna L e restituire il suo indirizzo dalla colonna M?</option>
+          <option value="Come posso filtrare i dati in Excel basandoti su più criteri?">Come posso filtrare i dati in Excel basandoti su più criteri?</option>
+        </select>
+      </div>
+
+      <!-- Campo di Input per la Domanda -->
       <div class="qa-input-container">
         <input type="text" id="excelQuestion" placeholder="Inserisci la tua domanda su Excel..." />
         <button onclick="findExcelFormula()">Trova Formula</button>
