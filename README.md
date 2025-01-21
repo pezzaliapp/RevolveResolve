@@ -314,6 +314,6 @@ Passi Successivi
 	4.	Implementa Feedback degli Utenti: Considera l’aggiunta di funzionalità per permettere agli utenti di segnalare risposte errate o suggerire nuove formule.
 	5.	Esplora Librerie Avanzate di NLP: Per una comprensione ancora più profonda delle domande degli utenti, potresti integrare librerie di Natural Language Processing (NLP) più avanzate o servizi esterni.
 
-Se hai bisogno di ulteriori assistenza o di funzionalità aggiuntive, non esitare a chiedere!
+Se hai bisogno di ulteriori assistenza o di funzionalità aggiuntive, non esitare a chiedere e scrivimi pezzalialessandro@gmail.com 
 
 Buon sviluppo!
