@@ -113,18 +113,28 @@ const excelFormulasDB = [
       "colonne a e b",
       "dati mancanti", 
       "dati assenti",
-      "dati non presenti"
+      "dati non presenti",
+      "trovare quali dati sono presenti in a ma non in b"
     ],
     answer: `
 Per trovare i valori di A che non sono presenti in B, puoi usare:
 
+\`\`\`excel
 =SE(CONTA.SE($B:$B; A2)=0; "Non presente in B"; "Presente in B")
+\`\`\`
 
 oppure, in inglese:
 
+\`\`\`excel
 =IF(COUNTIF($B:$B, A2)=0, "Not in B", "Found in B")
+\`\`\`
 
-Copia questa formula nella colonna adiacente (ad esempio colonna C) e trascinala in basso.
+**Istruzioni:**
+1. Inserisci la formula nella cella C2.
+2. Trascina la formula verso il basso per applicarla a tutte le righe necessarie.
+3. La colonna C mostrerà "Non presente in B" per i valori della colonna A che non sono presenti nella colonna B.
+
+**Nota:** Assicurati che i riferimenti delle colonne siano corretti e adattali se necessario.
     `
   },
   {
@@ -132,11 +142,15 @@ Copia questa formula nella colonna adiacente (ad esempio colonna C) e trascinala
     answer: `
 Per sommare un intervallo di celle, puoi usare:
 
+\`\`\`excel
 =SOMMA(A1:A10)
+\`\`\`
 
 oppure in inglese:
 
+\`\`\`excel
 =SUM(A1:A10)
+\`\`\`
     `
   },
   {
@@ -144,19 +158,27 @@ oppure in inglese:
     answer: `
 Per concatenare i valori di due celle, puoi usare:
 
+\`\`\`excel
 =A2 & " " & B2
+\`\`\`
 
 oppure:
 
+\`\`\`excel
 =STRINGA.UNISCI(" ", VERO, A2, B2)
+\`\`\`
 
 In inglese:
 
+\`\`\`excel
 =CONCATENATE(A2, " ", B2)
+\`\`\`
 
 oppure:
 
+\`\`\`excel
 =TEXTJOIN(" ", TRUE, A2, B2)
+\`\`\`
     `
   },
   {
@@ -164,17 +186,23 @@ oppure:
     answer: `
 Per calcolare la media aritmetica di un intervallo di celle, puoi usare:
 
+\`\`\`excel
 =MEDIA(A1:A10)
+\`\`\`
 
 oppure in inglese:
 
+\`\`\`excel
 =AVERAGE(A1:A10)
+\`\`\`
     `
   },
   // Aggiungi altri oggetti con "keywords" e "answer" qui
 ];
 
-// Funzione principale che legge la domanda e cerca la miglior corrispondenza
+/**
+ * Funzione principale che legge la domanda e cerca la miglior corrispondenza
+ */
 function findExcelFormula() {
   const questionInput = document.getElementById("excelQuestion");
   const question = questionInput.value.toLowerCase();
@@ -184,32 +212,37 @@ function findExcelFormula() {
     return;
   }
 
-  // Trova la prima corrispondenza che include tutte le keyword
-  for (let i = 0; i < excelFormulasDB.length; i++) {
-    const entry = excelFormulasDB[i];
-    let matchAllKeywords = true;
+  let bestMatch = null;
+  let maxMatchedKeywords = 0;
 
-    for (let k = 0; k < entry.keywords.length; k++) {
-      if (!question.includes(entry.keywords[k])) {
-        matchAllKeywords = false;
-        break;
+  // Trova la formula con il maggior numero di keyword corrispondenti
+  excelFormulasDB.forEach(entry => {
+    let matchedKeywords = 0;
+    entry.keywords.forEach(keyword => {
+      if (question.includes(keyword)) {
+        matchedKeywords += 1;
       }
-    }
+    });
 
-    if (matchAllKeywords) {
-      displayExcelAnswer(entry.answer);
-      return;
+    if (matchedKeywords > maxMatchedKeywords) {
+      bestMatch = entry;
+      maxMatchedKeywords = matchedKeywords;
     }
+  });
+
+  if (bestMatch && maxMatchedKeywords > 0) {
+    displayExcelAnswer(bestMatch.answer);
+  } else {
+    displayExcelAnswer("Nessuna formula trovata per la tua domanda.");
   }
-
-  // Se non troviamo corrispondenza
-  displayExcelAnswer("Nessuna formula trovata per la tua domanda.");
 }
 
-// Funzione di utilità per mostrare il risultato
+/**
+ * Funzione di utilità per mostrare il risultato
+ */
 function displayExcelAnswer(msg) {
   const answerDiv = document.getElementById("excelAnswer");
-  answerDiv.textContent = msg;
+  answerDiv.innerHTML = msg;
 }
 
 /*******************************************************
