@@ -11,6 +11,7 @@ let appData = {
 function initApp() {
   loadDataFromLocalStorage();
   updateDisplay();
+  setupPredefinedQuestions();
 }
 
 /*******************************************************
@@ -493,22 +494,19 @@ oppure in inglese:
 Per sommare i valori che soddisfano più criteri, puoi usare:
 
 \`\`\`excel
-=SOMMA.SE(Q:Q; "Prodotto A"; P:P)
 =SOMMA.PIÙ.SE(P:P; Q:Q; "Prodotto A"; R:R; ">10")
 \`\`\`
 
 oppure in inglese:
 
 \`\`\`excel
-=SUMIF(Q:Q, "Product A", P:P)
 =SUMIFS(P:P, Q:Q, "Product A", R:R, ">10")
 \`\`\`
 
 **Istruzioni:**
-1. Inserisci la prima formula nella cella desiderata.
-2. Inserisci la seconda formula nella cella desiderata.
-3. Modifica gli intervalli e i criteri secondo le tue necessità.
-4. La seconda formula permette di aggiungere ulteriori condizioni (ad esempio, sommare solo se nella colonna R il valore è maggiore di 10).
+1. Inserisci la formula nella cella desiderata.
+2. Modifica gli intervalli e i criteri secondo le tue necessità.
+3. La formula sommerà solo i valori nella colonna P che soddisfano entrambi i criteri.
     `
   },
   {
@@ -554,22 +552,19 @@ Per calcolare il tasso di crescita percentuale tra due valori, puoi usare:
 Per sommare i valori che soddisfano più criteri, puoi usare:
 
 \`\`\`excel
-=SOMMA.SE(Q:Q; "Prodotto A"; P:P)
 =SOMMA.PIÙ.SE(P:P; Q:Q; "Prodotto A"; R:R; ">10")
 \`\`\`
 
 oppure in inglese:
 
 \`\`\`excel
-=SUMIF(Q:Q, "Product A", P:P)
 =SUMIFS(P:P, Q:Q, "Product A", R:R, ">10")
 \`\`\`
 
 **Istruzioni:**
-1. Inserisci la prima formula nella cella desiderata.
-2. Inserisci la seconda formula nella cella desiderata.
-3. Modifica gli intervalli e i criteri secondo le tue necessità.
-4. La seconda formula permette di aggiungere ulteriori condizioni (ad esempio, sommare solo se nella colonna R il valore è maggiore di 10).
+1. Inserisci la formula nella cella desiderata.
+2. Modifica gli intervalli e i criteri secondo le tue necessità.
+3. La formula sommerà solo i valori nella colonna P che soddisfano entrambi i criteri.
     `
   },
   {
@@ -670,6 +665,24 @@ function findExcelFormula() {
 function displayExcelAnswer(msg) {
   const answerDiv = document.getElementById("excelAnswer");
   answerDiv.innerHTML = msg;
+}
+
+/**
+ * Funzione per impostare il menu a tendina delle domande predefinite
+ */
+function setupPredefinedQuestions() {
+  const dropdown = document.getElementById("predefinedQuestions");
+  
+  dropdown.addEventListener("change", function() {
+    const selectedQuestion = this.value;
+    const questionInput = document.getElementById("excelQuestion");
+    
+    if (selectedQuestion) {
+      questionInput.value = selectedQuestion;
+      // Opzionale: Auto-trigger della ricerca
+      // findExcelFormula();
+    }
+  });
 }
 
 /*******************************************************
