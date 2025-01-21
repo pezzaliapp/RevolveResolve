@@ -137,18 +137,63 @@ Istruzioni:
 	2.	Sostituisci “Mario” con il valore da cercare.
 	3.	Modifica l’intervallo della tabella (F:G) e l’indice della colonna (2) secondo le tue necessità.
 
-7. Come posso etichettare le vendite superiori a 1000 come “Alto” e le altre come “Basso”?
+7. Come posso trovare la media dei valori nella colonna A da A1 ad A10?
 
 Formula:
 
-=SE(H2 > 1000; "Alto"; "Basso")
+=MEDIA(A1:A10)
 
 Istruzioni:
 	1.	Inserisci la formula nella cella desiderata.
-	2.	Trascina la formula verso il basso per applicarla a tutte le righe necessarie.
-	3.	La colonna mostrerà “Alto” o “Basso” in base ai criteri impostati.
+	2.	Modifica l’intervallo di celle (A1:A10) secondo le tue necessità.
 
-8. Come posso rimuovere gli spazi inutili dal testo nella cella U2?
+8. Come posso calcolare la differenza percentuale tra le vendite di S1 e S2?
+
+Formula:
+
+=(S2 - S1) / S1
+
+Istruzioni:
+	1.	Inserisci la formula nella cella desiderata.
+	2.	Formatta la cella come percentuale andando su Home > Formato Percentuale.
+
+9. Come posso filtrare i dati in base a criteri specifici?
+
+Formula:
+
+Non esiste una formula diretta, ma puoi utilizzare i Filtri avanzati di Excel.
+
+Istruzioni:
+	1.	Seleziona l’intervallo di dati.
+	2.	Vai a Dati > Filtro.
+	3.	Clicca sull’icona del filtro nella colonna desiderata e imposta i criteri.
+
+10. Come posso ordinare i dati in ordine crescente nella colonna E?
+
+Formula:
+
+Non esiste una formula diretta, ma puoi utilizzare la funzione di Ordinamento di Excel.
+
+Istruzioni:
+	1.	Seleziona l’intervallo di dati da ordinare.
+	2.	Vai a Dati > Ordina.
+	3.	Scegli la colonna E e seleziona Ordine Crescente.
+	4.	Clicca su OK.
+
+11. Come posso calcolare il tasso di crescita percentuale tra due valori Y2 e Z2?
+
+Formula:
+
+=(Z2 - Y2) / Y2
+
+Istruzioni:
+	1.	Inserisci la formula nella cella desiderata.
+	2.	Vai a Home > Formato Percentuale.
+	3.	Inserisci la formula nella cella, ad esempio in AA2.
+	4.	Trascina la formula verso il basso per applicarla a tutte le righe necessarie.
+	5.	La cella mostrerà la differenza percentuale tra i valori di Y2 e Z2.
+
+12. Come posso rimuovere gli spazi inutili dal testo nella cella U2?
 
 Formula:
 
@@ -159,17 +204,53 @@ Istruzioni:
 	2.	Trascina la formula verso il basso per applicarla a tutte le righe necessarie.
 	3.	La cella mostrerà il testo senza spazi iniziali, finali e ridotti interni.
 
-9. Come posso calcolare la differenza percentuale tra le vendite di S1 e S2?
+13. Come posso sommare i valori che soddisfano un criterio specifico nella colonna Q?
 
 Formula:
 
-=(S2 - S1) / S1
+=SOMMA.SE(Q:Q; "Prodotto A"; P:P)
 
 Istruzioni:
 	1.	Inserisci la formula nella cella desiderata.
-	2.	Formatta la cella come percentuale andando su Home > Formato Percentuale.
+	2.	Modifica l’intervallo (Q:Q) e il criterio (“Prodotto A”) secondo le tue necessità.
+	3.	Specifica l’intervallo da sommare (P:P).
 
-10. Come posso utilizzare la funzione CERCA.X (XLOOKUP) per cercare il valore “Luca” nella colonna L e restituire il suo indirizzo dalla colonna M?
+14. Come posso sommare i valori che soddisfano più criteri nelle colonne Q e R?
+
+Formula:
+
+=SOMMA.PIÙ.SE(P:P; Q:Q; "Prodotto A"; R:R; ">10")
+
+Istruzioni:
+	1.	Inserisci la formula nella cella desiderata.
+	2.	Modifica gli intervalli (P:P, Q:Q, R:R) e i criteri (“Prodotto A”, “>10”) secondo le tue necessità.
+	3.	La formula sommerà solo i valori nella colonna P che soddisfano entrambi i criteri.
+
+15. Come posso calcolare il tasso di crescita percentuale tra due valori Y2 e Z2?
+
+Formula:
+
+=(Z2 - Y2) / Y2
+
+Istruzioni:
+	1.	Inserisci la formula nella cella desiderata.
+	2.	Vai a Home > Formato Percentuale.
+	3.	Inserisci la formula nella cella, ad esempio in AA2.
+	4.	Trascina la formula verso il basso per applicarla a tutte le righe necessarie.
+	5.	La cella mostrerà la differenza percentuale tra i valori di Y2 e Z2.
+
+16. Come posso sommare i valori che soddisfano più criteri nella colonna Q e R?
+
+Formula:
+
+=SOMMA.PIÙ.SE(P:P; Q:Q; "Prodotto A"; R:R; ">10")
+
+Istruzioni:
+	1.	Inserisci la formula nella cella desiderata.
+	2.	Modifica gli intervalli (P:P, Q:Q, R:R) e i criteri (“Prodotto A”, “>10”) secondo le tue necessità.
+	3.	La formula sommerà solo i valori nella colonna P che soddisfano entrambi i criteri.
+
+17. Come posso utilizzare la funzione CERCA.X (XLOOKUP) per cercare il valore “Luca” nella colonna L e restituire il suo indirizzo dalla colonna M?
 
 Formula:
 
@@ -179,6 +260,18 @@ Istruzioni:
 	1.	Inserisci la formula nella cella desiderata.
 	2.	Sostituisci “Luca” con il valore da cercare.
 	3.	Modifica l’intervallo della tabella (L:L, M:M) e il valore da restituire (“Non trovato”) secondo le tue necessità.
+
+18. Come posso filtrare i dati in Excel basandoti su più criteri?
+
+Formula:
+
+Non esiste una formula diretta, ma puoi utilizzare i Filtri Avanzati di Excel.
+
+Istruzioni:
+	1.	Vai a Dati > Avanzate.
+	2.	Configura i criteri di filtro e l’intervallo di destinazione.
+	3.	Specifica l’intervallo di dati da filtrare e l’intervallo dei criteri.
+	4.	Clicca su OK per applicare il filtro avanzato.
 
 Contribuire
 
@@ -231,73 +324,112 @@ La tua formula e le istruzioni dettagliate.
 `
 },
 
-Esempio di Aggiunta di una Nuova Formula
+Esempi di Aggiunta di Nuove Formule
 
-Supponiamo di voler aggiungere una formula per calcolare il tasso di crescita percentuale. Ecco come puoi farlo:
-
-{
-  id: 11,
-  keywords: [
-    "tasso di crescita", 
-    "crescita percentuale", 
-    "calcolare crescita", 
-    "percentuale di crescita", 
-    "growth rate",
-    "percentuale crescita",
-    "calcolare differenza percentuale"
-  ],
-  answer: `
-Per calcolare il tasso di crescita percentuale tra due valori, puoi usare:
-
-\`\`\`excel
-=(Z2 - Y2) / Y2
-\`\`\`
-
-**Per visualizzare come percentuale:**
-1. Inserisci la formula nella cella desiderata.
-2. Vai a **Home** > **Formato Percentuale**.
-
-**Istruzioni:**
-1. Inserisci la formula nella cella, ad esempio in AA2.
-2. Trascina la formula verso il basso per applicarla a tutte le righe necessarie.
-3. La cella mostrerà la differenza percentuale tra i valori di Y2 e Z2.
-    `
-}
-
-Aggiunta di Più Formule
-
-Puoi continuare ad aggiungere ulteriori formule seguendo lo stesso schema. Ecco un altro esempio per rimuovere gli spazi extra da una cella:
+1. Somma Condizionale Multipla
 
 {
-  id: 12,
+  id: 16,
   keywords: [
-    "rimuovere spazi", 
-    "eliminare spazi", 
-    "trim", 
-    "ANNULLA.SPAZI", 
-    "remove extra spaces",
-    "remove spaces in excel",
-    "clean text"
+    "somma condizionale multipla", 
+    "sommare con più criteri", 
+    "sumifs", 
+    "somme se", 
+    "sum with condition",
+    "sommare con criterio",
+    "sumifs in excel"
   ],
   answer: `
-Per rimuovere gli spazi extra dal testo in una cella, puoi usare:
+Per sommare i valori che soddisfano un criterio specifico, puoi usare:
 
 \`\`\`excel
-=ANNULLA.SPAZI(U2)
+=SOMMA.SE(Q:Q; "Prodotto A"; P:P)
 \`\`\`
 
 oppure in inglese:
 
 \`\`\`excel
-=TRIM(U2)
+=SUMIF(Q:Q, "Product A", P:P)
 \`\`\`
 
 **Istruzioni:**
 1. Inserisci la formula nella cella desiderata.
-2. Trascina la formula verso il basso per applicarla a tutte le righe necessarie.
-3. La cella mostrerà il testo senza spazi iniziali, finali e ridotti interni.
+2. Modifica l'intervallo (Q:Q) e il criterio ("Prodotto A") secondo le tue necessità.
+3. Specifica l'intervallo da sommare (P:P).
     `
 }
+
+2. Utilizzare la Funzione CERCA.X (XLOOKUP)
+
+{
+  id: 17,
+  keywords: [
+    "cerca.x", 
+    "xlookup", 
+    "funzione cercax", 
+    "xlookup in excel",
+    "cerca x lookup",
+    "xlookup formula",
+    "funzione xlookup"
+  ],
+  answer: `
+Per utilizzare la funzione CERCA.X (XLOOKUP) per cercare un valore e restituire un risultato corrispondente, puoi usare:
+
+\`\`\`excel
+=CERCA.X("Luca"; L:L; M:M; "Non trovato")
+\`\`\`
+
+oppure in inglese:
+
+\`\`\`excel
+=XLOOKUP("Luca", L:L, M:M, "Not found")
+\`\`\`
+
+**Istruzioni:**
+1. Inserisci la formula nella cella desiderata.
+2. Sostituisci "Luca" con il valore da cercare.
+3. Modifica l'intervallo della tabella (L:L, M:M) e il valore da restituire ("Non trovato") secondo le tue necessità.
+    `
+}
+
+3. Filtrare Dati con Più Criteri
+
+{
+  id: 18,
+  keywords: [
+    "filtrare dati multipli", 
+    "filtra con più criteri", 
+    "advanced filter", 
+    "filtraggio avanzato",
+    "filter data multiple conditions",
+    "filtrare dati con criteri multipli",
+    "excel advanced filter"
+  ],
+  answer: `
+Per filtrare i dati in Excel basandoti su più criteri, puoi usare i **Filtri Avanzati**.
+
+**Filtraggio Avanzato:**
+1. Vai a **Dati** > **Avanzate**.
+2. Configura i criteri di filtro e l'intervallo di destinazione.
+3. Specifica l'intervallo di dati da filtrare e l'intervallo dei criteri.
+4. Clicca su **OK** per applicare il filtro avanzato.
+
+**Istruzioni:**
+1. Prepara un intervallo di criteri separato che definisce le condizioni multiple.
+2. Seleziona l'intervallo di dati che desideri filtrare.
+3. Utilizza il filtro avanzato per applicare le condizioni specificate.
+    `
+}
+
+Suggerimenti per l’Espansione del Database
+	1.	Analizza le Domande degli Utenti:
+	•	Monitora le domande che gli utenti pongono all’app e aggiungi nuove formule basate su queste richieste.
+	2.	Utilizza Risorse Online:
+	•	Consulta forum come Stack Overflow, MrExcel, o Excel Easy per identificare le domande più frequenti.
+	3.	Organizza le Formule per Categoria:
+	•	Raggruppa le formule in categorie (es. Somma, Media, Ricerca, Condizionale) per facilitare l’espansione e la gestione del database.
+	4.	Implementa il Fuzzy Matching:
+	•	Fuse.js gestisce già il fuzzy matching, ma puoi regolare la soglia (threshold) nelle opzioni per bilanciare tra flessibilità e precisione.
 
 Ottimizzazione della Funzione di Matching
 
@@ -308,12 +440,16 @@ Conclusioni
 Con RevolveResolve, hai a disposizione uno strumento potente per gestire dati localmente e ottenere rapidamente formule Excel pertinenti alle tue esigenze. Grazie all’integrazione di Fuse.js per il fuzzy matching, l’app è in grado di comprendere meglio le tue domande, anche quando utilizzi forme singolari o plurali delle parole chiave.
 
 Passi Successivi
-	1.	Implementa il Codice Aggiornato: Assicurati che il tuo file app.js includa Fuse.js e le configurazioni necessarie per il fuzzy matching.
-	2.	Espandi il Database delle Formule: Aggiungi ulteriori domande e formule per coprire una gamma più ampia di esigenze degli utenti.
-	3.	Testa e Ottimizza: Testa l’app con diverse formulazioni delle domande per assicurarti che le corrispondenze funzionino come previsto.
-	4.	Implementa Feedback degli Utenti: Considera l’aggiunta di funzionalità per permettere agli utenti di segnalare risposte errate o suggerire nuove formule.
-	5.	Esplora Librerie Avanzate di NLP: Per una comprensione ancora più profonda delle domande degli utenti, potresti integrare librerie di Natural Language Processing (NLP) più avanzate o servizi esterni.
+	1.	Continua ad Espandere il Database
+	•	Aggiungi ulteriori formule e domande frequenti seguendo lo schema mostrato.
+	•	Assicurati di includere varie formulazioni e forme delle parole chiave per coprire una vasta gamma di possibili domande.
+	2.	Ottimizza la Soglia di Fuse.js
+	•	Se trovi che Fuse.js restituisce troppe o troppo poche corrispondenze, puoi regolare la threshold nelle opzioni di Fuse.js per bilanciare tra flessibilità e precisione.
+	3.	Implementa Feedback degli Utenti
+	•	Considera l’aggiunta di funzionalità per permettere agli utenti di segnalare risposte errate o suggerire nuove formule, migliorando ulteriormente l’accuratezza del database.
+	4.	Esplora Librerie Avanzate di NLP
+	•	Per una comprensione ancora più profonda delle domande degli utenti, potresti integrare librerie di Natural Language Processing (NLP) più avanzate o servizi esterni.
 
-Se hai bisogno di ulteriori assistenza o di funzionalità aggiuntive, non esitare a chiedere e scrivimi pezzalialessandro@gmail.com 
+Se hai bisogno di ulteriori assistenza o di funzionalità aggiuntive, non esitare a chiedere!
 
 Buon sviluppo!
