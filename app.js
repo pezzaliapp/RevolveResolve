@@ -111,10 +111,13 @@ const excelFormulasDB = [
       "due colonne", 
       "mancano", 
       "colonne a e b",
+      "colonne la a e la b",
       "dati mancanti", 
       "dati assenti",
       "dati non presenti",
-      "trovare quali dati sono presenti in a ma non in b"
+      "trovare quali dati sono presenti in a ma non in b",
+      "trovare quali dati mancano tra le due colonne",
+      "trovare quali dati non sono presenti"
     ],
     answer: `
 Per trovare i valori di A che non sono presenti in B, puoi usare:
