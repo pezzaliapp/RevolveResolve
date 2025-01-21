@@ -13,6 +13,7 @@ Sommario
 	•	Licenza
 
 Caratteristiche
+
 	•	Gestione Dati Locali: Inserisci, salva, esporta e importa dati facilmente all’interno dell’app utilizzando il local storage del browser.
 	•	Q&A Formule Excel: Poni domande in linguaggio naturale relative a formule Excel e ricevi formule accurate insieme a istruzioni passo-passo.
 	•	Fuzzy Matching: Integrato con Fuse.js per riconoscere e gestire variazioni nelle query degli utenti, inclusi forme singolari e plurali.
@@ -21,6 +22,7 @@ Caratteristiche
 	•	Interfaccia Utente Intuitiva: UI pulita e intuitiva per un’interazione senza problemi.
 
 Installazione
+
 	1.	Clona il Repository
 
 git clone https://github.com/tuo-username/RevolveResolve.git
