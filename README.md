@@ -35,6 +35,7 @@ cd RevolveResolve
 
 	3.	Servi l’App Localmente
 Poiché le PWA richiedono un server web, puoi utilizzare un server semplice come Live Server per VS Code o usare il server integrato di Python.
+
 	•	Usando Python 3
 
 python -m http.server 8000
@@ -48,6 +49,7 @@ serve
 
 	4.	Accedi all’App
 Apri il tuo browser e vai a http://localhost:8000.
+
 	5.	Installa la PWA
 Nel tuo browser, clicca sul pulsante di installazione (solitamente presente nella barra degli indirizzi) per aggiungere RevolveResolve al tuo dispositivo per l’accesso offline.
 
