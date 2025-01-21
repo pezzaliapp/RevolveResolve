@@ -54,6 +54,7 @@ Nel tuo browser, clicca sul pulsante di installazione (solitamente presente nell
 Utilizzo
 
 Gestione Dati Locali
+
 	1.	Inserisci Dati
 	•	Naviga nella sezione “Gestione Dati Locali”.
 	•	Inserisci del testo nel campo di input e clicca su “Salva nei dati locali” per memorizzare i dati.
@@ -65,6 +66,7 @@ Gestione Dati Locali
 	•	Seleziona un file JSON utilizzando l’input file e clicca su “Importa Dati (JSON)” per caricare i dati nell’app.
 
 Q&A Formule Excel
+
 	1.	Poni una Domanda
 	•	Naviga nella sezione “Trova la Formula Excel”.
 	•	Inserisci la tua domanda relativa a Excel in linguaggio naturale (es. “Ho due colonne A e B, devo trovare quali dati mancano tra le due colonne.”).
