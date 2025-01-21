@@ -326,6 +326,7 @@ Per migliorare ulteriormente la capacità della tua app di rispondere alle doman
     // ...altre parole chiave
   ],
   answer: `
+  
 La tua formula e le istruzioni dettagliate.
 `
 },
@@ -346,6 +347,7 @@ Esempi di Aggiunta di Nuove Formule
     "sumifs in excel"
   ],
   answer: `
+
 Per sommare i valori che soddisfano un criterio specifico, puoi usare:
 
 \`\`\`excel
@@ -359,6 +361,7 @@ oppure in inglese:
 \`\`\`
 
 **Istruzioni:**
+
 1. Inserisci la formula nella cella desiderata.
 2. Modifica l'intervallo (Q:Q) e il criterio ("Prodotto A") secondo le tue necessità.
 3. Specifica l'intervallo da sommare (P:P).
@@ -379,6 +382,7 @@ oppure in inglese:
     "funzione xlookup"
   ],
   answer: `
+
 Per utilizzare la funzione CERCA.X (XLOOKUP) per cercare un valore e restituire un risultato corrispondente, puoi usare:
 
 \`\`\`excel
@@ -392,6 +396,7 @@ oppure in inglese:
 \`\`\`
 
 **Istruzioni:**
+
 1. Inserisci la formula nella cella desiderata.
 2. Sostituisci "Luca" con il valore da cercare.
 3. Modifica l'intervallo della tabella (L:L, M:M) e il valore da restituire ("Non trovato") secondo le tue necessità.
@@ -412,15 +417,18 @@ oppure in inglese:
     "excel advanced filter"
   ],
   answer: `
+
 Per filtrare i dati in Excel basandoti su più criteri, puoi usare i **Filtri Avanzati**.
 
 **Filtraggio Avanzato:**
+
 1. Vai a **Dati** > **Avanzate**.
 2. Configura i criteri di filtro e l'intervallo di destinazione.
 3. Specifica l'intervallo di dati da filtrare e l'intervallo dei criteri.
 4. Clicca su **OK** per applicare il filtro avanzato.
 
 **Istruzioni:**
+
 1. Prepara un intervallo di criteri separato che definisce le condizioni multiple.
 2. Seleziona l'intervallo di dati che desideri filtrare.
 3. Utilizza il filtro avanzato per applicare le condizioni specificate.
@@ -428,6 +436,7 @@ Per filtrare i dati in Excel basandoti su più criteri, puoi usare i **Filtri Av
 }
 
 Suggerimenti per l’Espansione del Database
+
 	1.	Analizza le Domande degli Utenti:
 	•	Monitora le domande che gli utenti pongono all’app e aggiungi nuove formule basate su queste richieste.
 	2.	Utilizza Risorse Online:
@@ -446,6 +455,7 @@ Conclusioni
 Con RevolveResolve, hai a disposizione uno strumento potente per gestire dati localmente e ottenere rapidamente formule Excel pertinenti alle tue esigenze. Grazie all’integrazione di Fuse.js per il fuzzy matching, l’app è in grado di comprendere meglio le tue domande, anche quando utilizzi forme singolari o plurali delle parole chiave.
 
 Passi Successivi
+
 	1.	Continua ad Espandere il Database
 	•	Aggiungi ulteriori formule e domande frequenti seguendo lo schema mostrato.
 	•	Assicurati di includere varie formulazioni e forme delle parole chiave per coprire una vasta gamma di possibili domande.
