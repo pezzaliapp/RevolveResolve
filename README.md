@@ -86,6 +86,7 @@ Formula:
 =SE(CONTA.SE($B:$B; A2)=0; "Non presente in B"; "Presente in B")
 
 Istruzioni:
+
 	1.	Inserisci la formula nella cella C2.
 	2.	Trascina la formula verso il basso per applicarla a tutte le righe necessarie.
 	3.	La colonna C mostrerà “Non presente in B” per i valori della colonna A che non sono presenti nella colonna B.
@@ -99,6 +100,7 @@ Formula:
 =SOMMA(A1:A10)
 
 Istruzioni:
+
 	1.	Inserisci la formula nella cella desiderata.
 	2.	Modifica l’intervallo di celle (A1:A10) secondo le tue necessità.
 
@@ -119,6 +121,7 @@ Formula:
 =CONTA.SE(C:C; "Sì")
 
 Istruzioni:
+
 	1.	Inserisci la formula nella cella desiderata.
 	2.	Modifica l’intervallo (C:C) e il criterio (“Sì”) secondo le tue necessità.
 
@@ -129,6 +132,7 @@ Formula:
 =MAX(D1:D20)
 
 Istruzioni:
+
 	1.	Inserisci la formula nella cella desiderata.
 	2.	Modifica l’intervallo di celle (D1:D20) secondo le tue necessità.
 
@@ -139,6 +143,7 @@ Formula:
 =CERCA.VERT("Mario"; F:G; 2; FALSO)
 
 Istruzioni:
+
 	1.	Inserisci la formula nella cella desiderata.
 	2.	Sostituisci “Mario” con il valore da cercare.
 	3.	Modifica l’intervallo della tabella (F:G) e l’indice della colonna (2) secondo le tue necessità.
@@ -150,6 +155,7 @@ Formula:
 =MEDIA(A1:A10)
 
 Istruzioni:
+
 	1.	Inserisci la formula nella cella desiderata.
 	2.	Modifica l’intervallo di celle (A1:A10) secondo le tue necessità.
 
@@ -160,6 +166,7 @@ Formula:
 =(S2 - S1) / S1
 
 Istruzioni:
+
 	1.	Inserisci la formula nella cella desiderata.
 	2.	Formatta la cella come percentuale andando su Home > Formato Percentuale.
 
@@ -170,6 +177,7 @@ Formula:
 Non esiste una formula diretta, ma puoi utilizzare i Filtri avanzati di Excel.
 
 Istruzioni:
+
 	1.	Seleziona l’intervallo di dati.
 	2.	Vai a Dati > Filtro.
 	3.	Clicca sull’icona del filtro nella colonna desiderata e imposta i criteri.
@@ -181,6 +189,7 @@ Formula:
 Non esiste una formula diretta, ma puoi utilizzare la funzione di Ordinamento di Excel.
 
 Istruzioni:
+
 	1.	Seleziona l’intervallo di dati da ordinare.
 	2.	Vai a Dati > Ordina.
 	3.	Scegli la colonna E e seleziona Ordine Crescente.
@@ -193,6 +202,7 @@ Formula:
 =(Z2 - Y2) / Y2
 
 Istruzioni:
+
 	1.	Inserisci la formula nella cella desiderata.
 	2.	Vai a Home > Formato Percentuale.
 	3.	Inserisci la formula nella cella, ad esempio in AA2.
@@ -206,6 +216,7 @@ Formula:
 =ANNULLA.SPAZI(U2)
 
 Istruzioni:
+
 	1.	Inserisci la formula nella cella desiderata.
 	2.	Trascina la formula verso il basso per applicarla a tutte le righe necessarie.
 	3.	La cella mostrerà il testo senza spazi iniziali, finali e ridotti interni.
@@ -217,6 +228,7 @@ Formula:
 =SOMMA.SE(Q:Q; "Prodotto A"; P:P)
 
 Istruzioni:
+
 	1.	Inserisci la formula nella cella desiderata.
 	2.	Modifica l’intervallo (Q:Q) e il criterio (“Prodotto A”) secondo le tue necessità.
 	3.	Specifica l’intervallo da sommare (P:P).
@@ -228,6 +240,7 @@ Formula:
 =SOMMA.PIÙ.SE(P:P; Q:Q; "Prodotto A"; R:R; ">10")
 
 Istruzioni:
+
 	1.	Inserisci la formula nella cella desiderata.
 	2.	Modifica gli intervalli (P:P, Q:Q, R:R) e i criteri (“Prodotto A”, “>10”) secondo le tue necessità.
 	3.	La formula sommerà solo i valori nella colonna P che soddisfano entrambi i criteri.
@@ -239,6 +252,7 @@ Formula:
 =(Z2 - Y2) / Y2
 
 Istruzioni:
+
 	1.	Inserisci la formula nella cella desiderata.
 	2.	Vai a Home > Formato Percentuale.
 	3.	Inserisci la formula nella cella, ad esempio in AA2.
@@ -252,6 +266,7 @@ Formula:
 =SOMMA.PIÙ.SE(P:P; Q:Q; "Prodotto A"; R:R; ">10")
 
 Istruzioni:
+
 	1.	Inserisci la formula nella cella desiderata.
 	2.	Modifica gli intervalli (P:P, Q:Q, R:R) e i criteri (“Prodotto A”, “>10”) secondo le tue necessità.
 	3.	La formula sommerà solo i valori nella colonna P che soddisfano entrambi i criteri.
@@ -263,6 +278,7 @@ Formula:
 =CERCA.X("Luca"; L:L; M:M; "Non trovato")
 
 Istruzioni:
+
 	1.	Inserisci la formula nella cella desiderata.
 	2.	Sostituisci “Luca” con il valore da cercare.
 	3.	Modifica l’intervallo della tabella (L:L, M:M) e il valore da restituire (“Non trovato”) secondo le tue necessità.
@@ -274,6 +290,7 @@ Formula:
 Non esiste una formula diretta, ma puoi utilizzare i Filtri Avanzati di Excel.
 
 Istruzioni:
+
 	1.	Vai a Dati > Avanzate.
 	2.	Configura i criteri di filtro e l’intervallo di destinazione.
 	3.	Specifica l’intervallo di dati da filtrare e l’intervallo dei criteri.
@@ -456,14 +473,14 @@ Con RevolveResolve, hai a disposizione uno strumento potente per gestire dati lo
 
 Passi Successivi
 
-	1.	Continua ad Espandere il Database
+1.	Continua ad Espandere il Database
 	•	Aggiungi ulteriori formule e domande frequenti seguendo lo schema mostrato.
 	•	Assicurati di includere varie formulazioni e forme delle parole chiave per coprire una vasta gamma di possibili domande.
-	2.	Ottimizza la Soglia di Fuse.js
+2.	Ottimizza la Soglia di Fuse.js
 	•	Se trovi che Fuse.js restituisce troppe o troppo poche corrispondenze, puoi regolare la threshold nelle opzioni di Fuse.js per bilanciare tra flessibilità e precisione.
-	3.	Implementa Feedback degli Utenti
+3.	Implementa Feedback degli Utenti
 	•	Considera l’aggiunta di funzionalità per permettere agli utenti di segnalare risposte errate o suggerire nuove formule, migliorando ulteriormente l’accuratezza del database.
-	4.	Esplora Librerie Avanzate di NLP
+4.	Esplora Librerie Avanzate di NLP
 	•	Per una comprensione ancora più profonda delle domande degli utenti, potresti integrare librerie di Natural Language Processing (NLP) più avanzate o servizi esterni.
 
 Se hai bisogno di ulteriori assistenza o di funzionalità aggiuntive, non esitare a chiedere! scrivimi pezzalialessandro@gmail.com
