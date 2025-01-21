@@ -140,7 +140,7 @@ oppure, in inglese:
 3. La colonna C mostrerà "Non presente in B" per i valori della colonna A che non sono presenti nella colonna B.
 
 **Nota:** Assicurati che i riferimenti delle colonne siano corretti e adattali se necessario.
-  `
+    `
   },
   {
     id: 2,
@@ -651,6 +651,10 @@ function findExcelFormula() {
 
   const searchResults = fuse.search(question);
 
+  // Log per debugging
+  console.log("Domanda cercata:", question);
+  console.log("Risultati della ricerca:", searchResults);
+
   if (searchResults.length > 0) {
     const bestMatch = searchResults[0].item;
     displayExcelAnswer(bestMatch.answer);
@@ -679,8 +683,7 @@ function setupPredefinedQuestions() {
     
     if (selectedQuestion) {
       questionInput.value = selectedQuestion;
-      // Opzionale: Auto-trigger della ricerca
-      // findExcelFormula();
+      findExcelFormula(); // Auto-trigger della ricerca
     }
   });
 }
