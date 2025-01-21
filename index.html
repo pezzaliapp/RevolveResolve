@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="theme-color" content="#ffffff"/>
+
+  <title>RevolveResolve - PWA</title>
+
+  <!-- Link al nostro stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- Link al nostro manifest -->
+  <link rel="manifest" href="manifest.json" />
+  
+  <!-- (Facoltativo) Icona fallback (favicon) -->
+  <link rel="icon" href="icons/icon-192.png" type="image/png" />
+</head>
+<body>
+  <header>
+    <h1>RevolveResolve - PWA Demo</h1>
+  </header>
+
+  <main>
+    <section>
+      <h2>Gestione dati in locale</h2>
+      <div>
+        <label for="localDataInput">Inserisci testo:</label><br>
+        <input type="text" id="localDataInput" placeholder="Scrivi..." />
+        <button onclick="saveLocalData()">Salva nei dati locali</button>
+      </div>
+      <hr />
+      <h3>Dati memorizzati:</h3>
+      <pre id="storedDataDisplay"></pre>
+      <hr />
+      <button onclick="exportDataToFile()">Esporta Dati (JSON)</button>
+      <br><br>
+      <input type="file" id="importFile" />
+      <button onclick="importDataFromFile()">Importa Dati (JSON)</button>
+    </section>
+  </main>
+
+  <footer>
+    <p>Copyright © 2025 RevolveResolve</p>
+  </footer>
+
+  <!-- Script principale -->
+  <script src="app.js"></script>
+
+  <script>
+  // Registrazione del Service Worker per la PWA
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+      navigator.serviceWorker.register('service-worker.js')
+        .then(reg => console.log('Service Worker registrato con successo:', reg))
+        .catch(err => console.error('Errore nella registrazione del Service Worker:', err));
+    });
+  }
+  </script>
+</body>
+</html>
