@@ -18,60 +18,39 @@
 </head>
 <body>
   <header>
-    <h1>RevolveResolve - PWA Demo</h1>
+    <h1>RevolveResolve</h1>
   </header>
 
   <main>
-
-    <!-- Sezione Gestione Dati Locali -->
+    <!-- Gestione Dati Locali -->
     <section id="data-management-section">
       <h2>Gestione Dati Locali</h2>
-      <div>
-        <label for="localDataInput">Inserisci testo:</label><br>
-        <input type="text" id="localDataInput" placeholder="Scrivi..." />
+      <div class="qa-input-container">
+        <input type="text" id="localDataInput" placeholder="Inserisci i tuoi dati..." />
         <button onclick="saveLocalData()">Salva nei dati locali</button>
       </div>
-      <hr />
-      <h3>Dati memorizzati:</h3>
-      <pre id="storedDataDisplay"></pre>
-      <hr />
       <button onclick="exportDataToFile()">Esporta Dati (JSON)</button>
-      <br><br>
-      <input type="file" id="importFile" />
+      <input type="file" id="importFile" accept=".json" />
       <button onclick="importDataFromFile()">Importa Dati (JSON)</button>
+      <pre id="storedDataDisplay"></pre>
     </section>
 
-    <!-- Sezione Q&A Excel -->
+    <!-- Q&A Formule Excel -->
     <section id="excel-qa-section">
       <h2>Trova la Formula Excel</h2>
-      <p>Poni una domanda in linguaggio naturale per ottenere la formula corrispondente.</p>
-
       <div class="qa-input-container">
-        <input type="text" id="excelQuestion" placeholder="Es: 'Ho due colonne A e B...'"/>
+        <input type="text" id="excelQuestion" placeholder="Inserisci la tua domanda su Excel..." />
         <button onclick="findExcelFormula()">Trova Formula</button>
       </div>
-
-      <div id="excelAnswer" class="qa-answer"></div>
+      <div class="qa-answer" id="excelAnswer">La tua risposta apparirà qui...</div>
     </section>
-
   </main>
 
   <footer>
-    <p>&copy; 2025 RevolveResolve</p>
+    <p>&copy; 2025 RevolveResolve. Tutti i diritti riservati.</p>
   </footer>
 
-  <!-- Script principale -->
+  <!-- Includiamo il JavaScript -->
   <script src="app.js"></script>
-
-  <!-- Registrazione del Service Worker -->
-  <script>
-    if ('serviceWorker' in navigator) {
-      window.addEventListener('load', () => {
-        navigator.serviceWorker.register('service-worker.js')
-          .then(reg => console.log('Service Worker registrato con successo:', reg))
-          .catch(err => console.error('Errore nella registrazione del Service Worker:', err));
-      });
-    }
-  </script>
 </body>
 </html>
