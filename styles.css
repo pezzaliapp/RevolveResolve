@@ -1,0 +1,38 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  background: #f5f5f5;
+}
+
+header, footer {
+  background: #1d3557;
+  color: #fff;
+  padding: 1rem;
+  text-align: center;
+}
+
+main {
+  padding: 1rem;
+  background: #fff;
+  min-height: calc(100vh - 120px); /* lascia spazio a header e footer */
+}
+
+h1, h2, h3 {
+  margin-top: 0;
+}
+
+section {
+  background: #f0f0f0;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 5px;
+}
+
+pre {
+  background: #eaeaea;
+  padding: 1rem;
+  border-radius: 4px;
+  max-height: 200px;
+  overflow-y: auto;
+}
