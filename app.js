@@ -290,12 +290,12 @@ oppure, in inglese:
   {
     id: 7,
     keywords: [
-      "calcolare media", 
+      "trovare media", 
+      "calcolare average", 
       "media aritmetica", 
-      "average", 
-      "calcolare average",
-      "media valori",
-      "average"
+      "media valori", 
+      "average",
+      "calcolare la media"
     ],
     answer: `
 Per calcolare la media aritmetica di un intervallo di celle, puoi usare:
@@ -315,7 +315,82 @@ oppure in inglese:
 2. Modifica l'intervallo di celle (A1:A10) secondo le tue necessità.
     `
   },
-  // Continua ad aggiungere ulteriori domande e risposte qui
+  {
+    id: 8,
+    keywords: [
+      "differenza percentuale", 
+      "calcolare differenza percentuale", 
+      "percentuale di crescita", 
+      "differenza percentuale tra due colonne",
+      "percentuale tra y e z"
+    ],
+    answer: `
+Per calcolare la differenza percentuale tra due colonne Y e Z, puoi usare:
+
+\`\`\`excel
+=(Z2 - Y2) / Y2
+\`\`\`
+
+**Per visualizzare come percentuale:**
+1. Inserisci la formula nella cella desiderata.
+2. Vai a **Home** > **Formato Percentuale**.
+
+**Istruzioni:**
+1. Inserisci la formula nella cella, ad esempio in AA2.
+2. Trascina la formula verso il basso per applicarla a tutte le righe necessarie.
+3. La cella mostrerà la differenza percentuale tra i valori di Y2 e Z2.
+    `
+  },
+  {
+    id: 9,
+    keywords: [
+      "filtrare dati", 
+      "filtro avanzato", 
+      "filtrare celle",
+      "filter data",
+      "filtrare valori in excel"
+    ],
+    answer: `
+Per filtrare i dati in Excel basandoti su determinati criteri, puoi usare i **Filtri** o la **Formattazione Condizionale**.
+
+**Usare Filtri:**
+1. Seleziona l'intervallo di dati.
+2. Vai a **Dati** > **Filtro**.
+3. Clicca sull'icona del filtro nella colonna desiderata e imposta i criteri.
+
+**Usare Filtraggio Avanzato:**
+1. Vai a **Dati** > **Avanzate**.
+2. Configura i criteri di filtro e l'intervallo di destinazione.
+
+**Istruzioni:**
+- Utilizza i filtri per visualizzare solo le righe che soddisfano i tuoi criteri specifici, facilitando l'analisi dei dati.
+    `
+  },
+  {
+    id: 10,
+    keywords: [
+      "ordinare dati", 
+      "ordinare colonne", 
+      "sort data", 
+      "ordinare valori in excel",
+      "sort columns"
+    ],
+    answer: `
+Per ordinare i dati in Excel, puoi usare la funzione di **Ordinamento**.
+
+**Ordinare in Ordine Crescente o Decrescente:**
+1. Seleziona l'intervallo di dati da ordinare.
+2. Vai a **Dati** > **Ordina**.
+3. Scegli la colonna per l'ordinamento e seleziona **Ordine Crescente** o **Decrescente**.
+4. Clicca su **OK**.
+
+**Istruzioni:**
+1. Seleziona l'intervallo di celle che desideri ordinare.
+2. Decidi se ordinare in base a una o più colonne.
+3. Scegli il tipo di ordinamento (crescente o decrescente) e applicalo.
+    `
+  },
+  // Aggiungi ulteriori oggetti per ciascuna delle domande sopra elencate
 ];
 
 /*******************************************************
@@ -334,7 +409,7 @@ const fuse = new Fuse(excelFormulasDB, fuseOptions);
  */
 function findExcelFormula() {
   const questionInput = document.getElementById("excelQuestion");
-  const question = questionInput.value.trim();
+  const question = questionInput.value.trim().toLowerCase();
 
   if (!question) {
     displayExcelAnswer("Inserisci una domanda valida.");
