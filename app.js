@@ -107,6 +107,7 @@ function importDataFromFile() {
 // "Database" di domande-chiave e formule Excel
 const excelFormulasDB = [
   {
+    id: 1,
     keywords: [
       "due colonne", 
       "mancano", 
@@ -138,10 +139,21 @@ oppure, in inglese:
 3. La colonna C mostrerà "Non presente in B" per i valori della colonna A che non sono presenti nella colonna B.
 
 **Nota:** Assicurati che i riferimenti delle colonne siano corretti e adattali se necessario.
-    `
+  `
   },
   {
-    keywords: ["sommare", "sum", "somma", "totale", "totale somma"],
+    id: 2,
+    keywords: [
+      "come sommare", 
+      "somma", 
+      "somma un intervallo di celle",
+      "sommare celle",
+      "calcolare somma",
+      "sommare a1:a10",
+      "sommare valori",
+      "sum",
+      "sommare valori in excel"
+    ],
     answer: `
 Per sommare un intervallo di celle, puoi usare:
 
@@ -154,38 +166,137 @@ oppure in inglese:
 \`\`\`excel
 =SUM(A1:A10)
 \`\`\`
+
+**Istruzioni:**
+1. Inserisci la formula nella cella desiderata.
+2. Modifica l'intervallo di celle (A1:A10) secondo le tue necessità.
     `
   },
   {
-    keywords: ["concatenare", "unire", "due celle", "concat", "unisci testo"],
+    id: 3,
+    keywords: [
+      "media", 
+      "calcolare media", 
+      "media aritmetica", 
+      "calcolare average", 
+      "media valori",
+      "average",
+      "calcolare la media"
+    ],
     answer: `
-Per concatenare i valori di due celle, puoi usare:
+Per calcolare la media aritmetica di un intervallo di celle, puoi usare:
 
 \`\`\`excel
-=A2 & " " & B2
+=MEDIA(B1:B10)
 \`\`\`
 
-oppure:
+oppure in inglese:
 
 \`\`\`excel
-=STRINGA.UNISCI(" ", VERO, A2, B2)
+=AVERAGE(B1:B10)
 \`\`\`
 
-In inglese:
-
-\`\`\`excel
-=CONCATENATE(A2, " ", B2)
-\`\`\`
-
-oppure:
-
-\`\`\`excel
-=TEXTJOIN(" ", TRUE, A2, B2)
-\`\`\`
+**Istruzioni:**
+1. Inserisci la formula nella cella desiderata.
+2. Modifica l'intervallo di celle (B1:B10) secondo le tue necessità.
     `
   },
   {
-    keywords: ["media", "average", "media aritmetica"],
+    id: 4,
+    keywords: [
+      "come contare", 
+      "contare celle", 
+      "conta.se", 
+      "conta celle con criterio",
+      "countif",
+      "contare valori specifici"
+    ],
+    answer: `
+Per contare il numero di celle che soddisfano un criterio specifico, puoi usare:
+
+\`\`\`excel
+=CONTA.SE(C:C; "Sì")
+\`\`\`
+
+oppure in inglese:
+
+\`\`\`excel
+=COUNTIF(C:C, "Yes")
+\`\`\`
+
+**Istruzioni:**
+1. Inserisci la formula nella cella desiderata.
+2. Modifica l'intervallo (C:C) e il criterio ("Sì") secondo le tue necessità.
+    `
+  },
+  {
+    id: 5,
+    keywords: [
+      "valore massimo", 
+      "trova massimo", 
+      "max", 
+      "valore più alto",
+      "trova il valore maggiore"
+    ],
+    answer: `
+Per trovare il valore più alto in un intervallo di celle, puoi usare:
+
+\`\`\`excel
+=MAX(D1:D20)
+\`\`\`
+
+oppure in inglese:
+
+\`\`\`excel
+=MAX(D1:D20)
+\`\`\`
+
+**Istruzioni:**
+1. Inserisci la formula nella cella desiderata.
+2. Modifica l'intervallo di celle (D1:D20) secondo le tue necessità.
+    `
+  },
+  {
+    id: 6,
+    keywords: [
+      "cercare un valore", 
+      "cerca.vert", 
+      "vlookup", 
+      "cerca.vert",
+      "cerca.x",
+      "xlookup",
+      "cerca nella tabella",
+      "trova valore corrispondente"
+    ],
+    answer: `
+Per cercare un valore in una tabella e restituire un risultato corrispondente, puoi usare:
+
+\`\`\`excel
+=CERCA.VERT("Mario"; F:G; 2; FALSO)
+\`\`\`
+
+oppure, in inglese:
+
+\`\`\`excel
+=VLOOKUP("Mario", F:G, 2, FALSE)
+\`\`\`
+
+**Istruzioni:**
+1. Inserisci la formula nella cella desiderata.
+2. Sostituisci "Mario" con il valore da cercare.
+3. Modifica l'intervallo della tabella (F:G) e l'indice della colonna (2) secondo le tue necessità.
+    `
+  },
+  {
+    id: 7,
+    keywords: [
+      "calcolare media", 
+      "media aritmetica", 
+      "average", 
+      "calcolare average",
+      "media valori",
+      "average"
+    ],
     answer: `
 Per calcolare la media aritmetica di un intervallo di celle, puoi usare:
 
@@ -198,42 +309,42 @@ oppure in inglese:
 \`\`\`excel
 =AVERAGE(A1:A10)
 \`\`\`
+
+**Istruzioni:**
+1. Inserisci la formula nella cella desiderata.
+2. Modifica l'intervallo di celle (A1:A10) secondo le tue necessità.
     `
   },
-  // Aggiungi altri oggetti con "keywords" e "answer" qui
+  // Continua ad aggiungere ulteriori domande e risposte qui
 ];
 
+/*******************************************************
+ * Configurazione di Fuse.js
+ *******************************************************/
+const fuseOptions = {
+  includeScore: true,
+  threshold: 0.4, // Imposta la soglia di tolleranza per le corrispondenze
+  keys: ['keywords']
+};
+
+const fuse = new Fuse(excelFormulasDB, fuseOptions);
+
 /**
- * Funzione principale che legge la domanda e cerca la miglior corrispondenza
+ * Funzione principale che legge la domanda e cerca la miglior corrispondenza usando Fuse.js
  */
 function findExcelFormula() {
   const questionInput = document.getElementById("excelQuestion");
-  const question = questionInput.value.toLowerCase();
+  const question = questionInput.value.trim();
 
-  if (!question.trim()) {
+  if (!question) {
     displayExcelAnswer("Inserisci una domanda valida.");
     return;
   }
 
-  let bestMatch = null;
-  let maxMatchedKeywords = 0;
+  const searchResults = fuse.search(question);
 
-  // Trova la formula con il maggior numero di keyword corrispondenti
-  excelFormulasDB.forEach(entry => {
-    let matchedKeywords = 0;
-    entry.keywords.forEach(keyword => {
-      if (question.includes(keyword)) {
-        matchedKeywords += 1;
-      }
-    });
-
-    if (matchedKeywords > maxMatchedKeywords) {
-      bestMatch = entry;
-      maxMatchedKeywords = matchedKeywords;
-    }
-  });
-
-  if (bestMatch && maxMatchedKeywords > 0) {
+  if (searchResults.length > 0) {
+    const bestMatch = searchResults[0].item;
     displayExcelAnswer(bestMatch.answer);
   } else {
     displayExcelAnswer("Nessuna formula trovata per la tua domanda.");
