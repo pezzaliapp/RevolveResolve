@@ -390,6 +390,244 @@ Per ordinare i dati in Excel, puoi usare la funzione di **Ordinamento**.
 3. Scegli il tipo di ordinamento (crescente o decrescente) e applicalo.
     `
   },
+  {
+    id: 11,
+    keywords: [
+      "tasso di crescita", 
+      "crescita percentuale", 
+      "calcolare crescita", 
+      "percentuale di crescita", 
+      "growth rate",
+      "percentuale crescita",
+      "calcolare differenza percentuale"
+    ],
+    answer: `
+Per calcolare il tasso di crescita percentuale tra due valori, puoi usare:
+
+\`\`\`excel
+=(Z2 - Y2) / Y2
+\`\`\`
+
+**Per visualizzare come percentuale:**
+1. Inserisci la formula nella cella desiderata.
+2. Vai a **Home** > **Formato Percentuale**.
+
+**Istruzioni:**
+1. Inserisci la formula nella cella, ad esempio in AA2.
+2. Trascina la formula verso il basso per applicarla a tutte le righe necessarie.
+3. La cella mostrerà la differenza percentuale tra i valori di Y2 e Z2.
+    `
+  },
+  {
+    id: 12,
+    keywords: [
+      "rimuovere spazi", 
+      "eliminare spazi", 
+      "trim", 
+      "ANNULLA.SPAZI", 
+      "remove extra spaces",
+      "remove spaces in excel",
+      "clean text"
+    ],
+    answer: `
+Per rimuovere gli spazi extra dal testo in una cella, puoi usare:
+
+\`\`\`excel
+=ANNULLA.SPAZI(U2)
+\`\`\`
+
+oppure in inglese:
+
+\`\`\`excel
+=TRIM(U2)
+\`\`\`
+
+**Istruzioni:**
+1. Inserisci la formula nella cella desiderata.
+2. Trascina la formula verso il basso per applicarla a tutte le righe necessarie.
+3. La cella mostrerà il testo senza spazi iniziali, finali e ridotti interni.
+    `
+  },
+  {
+    id: 13,
+    keywords: [
+      "somma condizionale", 
+      "sommare se", 
+      "sumif", 
+      "somme se", 
+      "sum with condition",
+      "sommare con criterio",
+      "sumif in excel"
+    ],
+    answer: `
+Per sommare i valori che soddisfano un criterio specifico, puoi usare:
+
+\`\`\`excel
+=SOMMA.SE(Q:Q; "Prodotto A"; P:P)
+\`\`\`
+
+oppure in inglese:
+
+\`\`\`excel
+=SUMIF(Q:Q, "Product A", P:P)
+\`\`\`
+
+**Istruzioni:**
+1. Inserisci la formula nella cella desiderata.
+2. Modifica l'intervallo (Q:Q) e il criterio ("Prodotto A") secondo le tue necessità.
+3. Specifica l'intervallo da sommare (P:P).
+    `
+  },
+  {
+    id: 14,
+    keywords: [
+      "somma condizionale multipla", 
+      "sommare con più criteri", 
+      "sumifs", 
+      "somme avec plusieurs critères", 
+      "sum with multiple conditions",
+      "sommare con criteri multipli",
+      "sumifs in excel"
+    ],
+    answer: `
+Per sommare i valori che soddisfano più criteri, puoi usare:
+
+\`\`\`excel
+=SOMMA.SE(Q:Q; "Prodotto A"; P:P)
+=SOMMA.PIÙ.SE(P:P; Q:Q; "Prodotto A"; R:R; ">10")
+\`\`\`
+
+oppure in inglese:
+
+\`\`\`excel
+=SUMIF(Q:Q, "Product A", P:P)
+=SUMIFS(P:P, Q:Q, "Product A", R:R, ">10")
+\`\`\`
+
+**Istruzioni:**
+1. Inserisci la prima formula nella cella desiderata.
+2. Inserisci la seconda formula nella cella desiderata.
+3. Modifica gli intervalli e i criteri secondo le tue necessità.
+4. La seconda formula permette di aggiungere ulteriori condizioni (ad esempio, sommare solo se nella colonna R il valore è maggiore di 10).
+    `
+  },
+  {
+    id: 15,
+    keywords: [
+      "tasso di crescita", 
+      "crescita percentuale", 
+      "calcolare crescita", 
+      "percentuale di crescita", 
+      "growth rate",
+      "percentuale crescita",
+      "calcolare differenza percentuale"
+    ],
+    answer: `
+Per calcolare il tasso di crescita percentuale tra due valori, puoi usare:
+
+\`\`\`excel
+=(Z2 - Y2) / Y2
+\`\`\`
+
+**Per visualizzare come percentuale:**
+1. Inserisci la formula nella cella desiderata.
+2. Vai a **Home** > **Formato Percentuale**.
+
+**Istruzioni:**
+1. Inserisci la formula nella cella, ad esempio in AA2.
+2. Trascina la formula verso il basso per applicarla a tutte le righe necessarie.
+3. La cella mostrerà la differenza percentuale tra i valori di Y2 e Z2.
+    `
+  },
+  {
+    id: 16,
+    keywords: [
+      "somma condizionale multipla", 
+      "sommare con più criteri", 
+      "sumifs", 
+      "somme avec plusieurs critères", 
+      "sum with multiple conditions",
+      "sommare con criteri multipli",
+      "sumifs in excel"
+    ],
+    answer: `
+Per sommare i valori che soddisfano più criteri, puoi usare:
+
+\`\`\`excel
+=SOMMA.SE(Q:Q; "Prodotto A"; P:P)
+=SOMMA.PIÙ.SE(P:P; Q:Q; "Prodotto A"; R:R; ">10")
+\`\`\`
+
+oppure in inglese:
+
+\`\`\`excel
+=SUMIF(Q:Q, "Product A", P:P)
+=SUMIFS(P:P, Q:Q, "Product A", R:R, ">10")
+\`\`\`
+
+**Istruzioni:**
+1. Inserisci la prima formula nella cella desiderata.
+2. Inserisci la seconda formula nella cella desiderata.
+3. Modifica gli intervalli e i criteri secondo le tue necessità.
+4. La seconda formula permette di aggiungere ulteriori condizioni (ad esempio, sommare solo se nella colonna R il valore è maggiore di 10).
+    `
+  },
+  {
+    id: 17,
+    keywords: [
+      "cerca.x", 
+      "xlookup", 
+      "funzione cercax", 
+      "xlookup in excel",
+      "cerca x lookup",
+      "xlookup formula",
+      "funzione xlookup"
+    ],
+    answer: `
+Per utilizzare la funzione CERCA.X (XLOOKUP) per cercare un valore e restituire un risultato corrispondente, puoi usare:
+
+\`\`\`excel
+=CERCA.X("Luca"; L:L; M:M; "Non trovato")
+\`\`\`
+
+oppure in inglese:
+
+\`\`\`excel
+=XLOOKUP("Luca", L:L, M:M, "Not found")
+\`\`\`
+
+**Istruzioni:**
+1. Inserisci la formula nella cella desiderata.
+2. Sostituisci "Luca" con il valore da cercare.
+3. Modifica l'intervallo della tabella (L:L, M:M) e il valore da restituire ("Non trovato") secondo le tue necessità.
+    `
+  },
+  {
+    id: 18,
+    keywords: [
+      "filtrare dati multipli", 
+      "filtra con più criteri", 
+      "advanced filter", 
+      "filtraggio avanzato",
+      "filter data multiple conditions",
+      "filtrare dati con criteri multipli",
+      "excel advanced filter"
+    ],
+    answer: `
+Per filtrare i dati in Excel basandoti su più criteri, puoi usare i **Filtri Avanzati**.
+
+**Filtraggio Avanzato:**
+1. Vai a **Dati** > **Avanzate**.
+2. Configura i criteri di filtro e l'intervallo di destinazione.
+3. Specifica l'intervallo di dati da filtrare e l'intervallo dei criteri.
+4. Clicca su **OK** per applicare il filtro avanzato.
+
+**Istruzioni:**
+1. Prepara un intervallo di criteri separato che definisce le condizioni multiple.
+2. Seleziona l'intervallo di dati che desideri filtrare.
+3. Utilizza il filtro avanzato per applicare le condizioni specificate.
+    `
+  }
   // Aggiungi ulteriori oggetti per ciascuna delle domande sopra elencate
 ];
 
