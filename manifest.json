@@ -4,8 +4,8 @@
   "start_url": "index.html",
   "display": "standalone",
   "background_color": "#ffffff",
-  "theme_color": "#ffffff",
-  "description": "Una PWA demo per gestire dati localmente e condividerli.",
+  "theme_color": "#1d3557",
+  "description": "Una PWA demo per gestire dati localmente, condividere e trovare formule Excel.",
   "icons": [
     {
       "src": "icons/icon-192.png",
